@@ -1,39 +1,1419 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fix Power</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fix Power｜高圧電力の固定料金プラン</title>
+  <meta name="description" content="フィックスパワーは市場連動リスクを大幅軽減。独自の燃料調整費なし、固定プランで企業のコスト削減と予算管理の安定化を実現します。">
+  <meta property="og:site_name" content="Fix Power">
+  <meta property="og:title" content="Fix Power｜高圧電力の固定料金プラン">
+  <meta property="og:description" content="市場連動リスクを大幅軽減。固定プランで企業のコスト削減と予算管理の安定化を。">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "株式会社フィックスパワー",
+    "url": "https://fixpower-lp.com",
+    "telephone": "050-8895-4820"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "切り替えにかかる費用はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "事務手数料や工事費用などのお客様負担は、原則発生いたしません。※大規模な設備変更等、特殊なケースを除く"}},
+      {"@type": "Question", "name": "電気の品質は変わりますか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ、変わりません。現在と同じ送電設備を使用するため、電気の品質や安定性はこれまで通りです。停電時の対応もこれまで同様、送配電事業者が行います。"}},
+      {"@type": "Question", "name": "見積もりはどれくらいでできますか？", "acceptedAnswer": {"@type": "Answer", "text": "直近12ヶ月分の検針票をいただければ、通常3〜5営業日程度でシミュレーションを作成しご提案させていただきます。"}},
+      {"@type": "Question", "name": "切り替えまでどのくらいの期間がかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "お申し込みから供給開始まで、最短1ヶ月〜2ヶ月程度です。現在の契約状況や検針日によって前後する場合があります。"}},
+      {"@type": "Question", "name": "市場高騰のリスクはありませんか？", "acceptedAnswer": {"@type": "Answer", "text": "フィックスパワーの固定プランなら、市場価格が高騰してもお客様への請求単価は変わりません。リスクを当社が吸収する設計です。"}},
+      {"@type": "Question", "name": "どのような施設が対象ですか？", "acceptedAnswer": {"@type": "Answer", "text": "高圧電力をご利用の工場、オフィスビル、商業施設、医療・福祉施設、学校などが対象です。"}}
+    ]
+  }
+  </script>
   <link rel="icon" href="./images/common/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="./images/common/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="./images/common/favicon-16x16.png" sizes="16x16">
   <link rel="apple-touch-icon" href="./images/common/apple-touch-icon.png">
   <link rel="manifest" href="./images/common/site.webmanifest">
   <meta name="theme-color" content="#0F172A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800&display=swap">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #1E293B;
+      line-height: 1.6;
+      background: #fff;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ---------- Utility ---------- */
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+    .section--gray { background: #F8FAFC; }
+    .section--gradient {
+      background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 50%, #1E40AE 100%);
+      color: #fff;
+    }
+    .section--gradient .section-title { color: #fff; }
+    .section--gradient .accent { color: #60A5FA; }
+    .section--gradient .reduction-note { color: #94A3B8; }
+    .section--gradient .reduction-right { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); }
+    .section--gradient .chart-title { color: #fff; }
+    .section--gradient .reduction-right-sub { color: #94A3B8; }
+    .section--gradient .bar-label { color: #CBD5E1; }
+    .section--gradient .section-cta .btn-primary { background: #FF7A00; }
+    .section-label {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #2563EB;
+      letter-spacing: .05em;
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .section-title .accent { color: #2563EB; }
+    .section-sub {
+      font-size: 16px;
+      color: #64748B;
+      margin-bottom: 48px;
+    }
+    .text-center { text-align: center; }
+
+    /* ---------- Header ---------- */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: transparent;
+      padding: 14px 0;
+      transition: background .3s, padding .3s, box-shadow .3s;
+    }
+    .header.scrolled {
+      background: rgba(15, 23, 42, .95);
+      backdrop-filter: blur(8px);
+      padding: 10px 0;
+      box-shadow: 0 2px 16px rgba(0,0,0,.15);
+    }
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-logo-img {
+      height: 28px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FF7A00;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 999px;
+      transition: opacity .2s;
+    }
+    .header-cta:hover { opacity: .85; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 100%);
+      color: #fff;
+      padding: 140px 0 80px;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('./images/pc/1_1_hero.webp') center/cover;
+      opacity: .25;
+    }
+    .hero .container { position: relative; }
+    .hero-title {
+      font-size: clamp(36px, 6vw, 60px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .hero-title .highlight { color: #8DA9DB; }
+    .hero-lead {
+      font-size: clamp(20px, 3vw, 24px);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .hero-desc {
+      font-size: 16px;
+      color: #F1F5F9;
+      max-width: 640px;
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .hero-badge::before {
+      content: '✓';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px; height: 22px;
+      background: #2563EB;
+      color: #fff;
+      font-size: 12px;
+      border-radius: 50%;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FF7A00;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+      padding: 16px 36px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(255, 122, 0, .35);
+      transition: opacity .2s, transform .1s;
+    }
+    .btn-primary:hover { opacity: .9; }
+    .btn-primary:active { transform: scale(.98); }
+    .section-cta { text-align: center; margin-top: 40px; }
+
+    /* ---------- Problems ---------- */
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .problem-card {
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .problem-card-icon {
+      width: 48px; height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    .problem-card-icon--red { background: #FEF2F2; }
+    .problem-card-icon--blue { background: #EFF6FF; }
+    .problem-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .problem-card p {
+      font-size: 14px;
+      color: #64748B;
+      line-height: 1.7;
+    }
+    .problem-card .red { color: #DC2626; font-weight: 700; }
+    .problem-card .blue { color: #2563EB; font-weight: 700; }
+    .problem-solution {
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      border-radius: 12px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1E40AE;
+    }
+    .problem-solution::before { content: '💡'; font-size: 20px; }
+
+    /* ---------- Chart ---------- */
+    .chart-area {
+      margin-top: 40px;
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 28px 32px;
+    }
+    .chart-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .chart-legend {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 16px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #64748B;
+    }
+    .chart-legend-item { display: flex; align-items: center; gap: 6px; }
+    .chart-dot {
+      display: inline-block;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+    }
+    .chart-dot--red { background: #EF4444; }
+    .chart-dot--blue { background: #1E3AAE; }
+    .chart-img {
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ---------- Comparison Table ---------- */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      margin-top: 24px;
+    }
+    .comparison-table th,
+    .comparison-table td {
+      padding: 14px 16px;
+      border: 1px solid #E5E7EB;
+      text-align: left;
+      vertical-align: middle;
+    }
+    .comparison-table thead th {
+      color: #fff;
+      font-weight: 700;
+      text-align: center;
+    }
+    .comparison-table thead th:nth-child(1) { background: #1E293B; }
+    .comparison-table thead th:nth-child(2) { background: #334155; }
+    .comparison-table thead th:nth-child(3) { background: #475569; }
+    .comparison-table thead th:nth-child(4) { background: #2563EB; }
+    .comparison-table tbody td:first-child {
+      font-weight: 700;
+      background: #F8FAFC;
+      white-space: nowrap;
+    }
+    .comparison-table tbody td:last-child { background: #EFF6FF; }
+    .comparison-table .mark-good { color: #1E293B; }
+    .comparison-table .mark-bad { color: #DC2626; }
+    .comparison-table .mark-mid { color: #64748B; }
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+    /* ---------- Reduction ---------- */
+    .reduction-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .reduction-stat { text-align: center; margin: 24px 0; }
+    .reduction-stat .label { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .reduction-number {
+      font-size: clamp(80px, 12vw, 120px);
+      font-weight: 800;
+      color: #2563EB;
+      line-height: 1;
+    }
+    .reduction-number span { font-size: 48px; }
+    .reduction-desc { font-size: 20px; font-weight: 700; }
+    .reduction-note { font-size: 12px; color: #64748B; line-height: 1.6; margin-top: 16px; }
+    .reduction-bottom { font-size: 17px; margin-top: 20px; line-height: 1.5; }
+    .reduction-right {
+      background: #F8FAFC;
+      border-radius: 16px;
+      padding: 28px 32px;
+    }
+    .reduction-right-sub { font-size: 13px; color: #64748B; margin-bottom: 24px; }
+
+    /* Bar chart SVG */
+    .bar-chart-svg {
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    /* ---------- Case Studies ---------- */
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+      gap: 24px;
+    }
+    .case-card {
+      background: linear-gradient(135deg, #1E3A8A, #2563EB);
+      border-radius: 16px;
+      padding: 28px 24px;
+      color: #fff;
+    }
+    .case-card-img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 16px;
+    }
+    .case-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
+    .case-card-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+    .case-card-label { font-size: 12px; font-weight: 700; opacity: .85; }
+    .case-card-value { font-size: 22px; font-weight: 800; }
+    .case-card-amount { font-size: 24px; font-weight: 800; }
+    .down-arrow { color: #34D399; font-size: 16px; }
+    .down-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      background: rgba(52, 211, 153, .2);
+      color: #34D399;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    /* ---------- Voices ---------- */
+    .voices-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+      gap: 24px;
+    }
+    .voice-card {
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .voice-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+    .voice-card p { font-size: 14px; color: #475569; line-height: 1.8; }
+    .voice-card-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #64748B;
+      background: #F1F5F9;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-top: 12px;
+    }
+
+    /* ---------- Features ---------- */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 28px 24px;
+    }
+    .feature-icon {
+      width: 48px; height: 48px;
+      background: #2563EB;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 22px;
+      margin-bottom: 16px;
+      box-shadow: 0 -4px 8px rgba(37, 99, 235, .3);
+    }
+    .feature-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #475569; line-height: 1.7; }
+
+    /* ---------- Steps ---------- */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+      gap: 32px;
+    }
+    .step-card {
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+      position: relative;
+    }
+    .step-badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #2563EB;
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      padding: 4px 14px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+    .step-icon {
+      width: 64px; height: 64px;
+      background: #EFF6FF;
+      border: 1px solid #DBEAFE;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .step-icon img { width: 36px; height: 36px; }
+    .step-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .step-card p { font-size: 14px; color: #475569; line-height: 1.7; }
+
+    /* ---------- Company / Contact Info ---------- */
+    .company-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .company-detail h3 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #2563EB;
+      margin-bottom: 20px;
+    }
+    .company-detail dl {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px 16px;
+      font-size: 14px;
+    }
+    .company-detail dt { font-weight: 700; color: #64748B; }
+    .company-detail dd { color: #1E293B; }
+    .company-phone {
+      text-align: center;
+    }
+    .company-phone .label { font-size: 14px; font-weight: 700; color: #475569; margin-bottom: 4px; }
+    .company-phone .number {
+      font-size: clamp(32px, 5vw, 42px);
+      font-weight: 800;
+      color: #2563EB;
+    }
+    .company-phone .sub { font-size: 13px; font-weight: 700; color: #64748B; margin-top: 4px; }
+    .phone-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #2563EB;
+      color: #fff;
+      font-size: clamp(20px, 4vw, 28px);
+      font-weight: 800;
+      padding: 14px 32px;
+      border-radius: 12px;
+      margin: 8px 0;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, .25);
+      transition: opacity .2s;
+    }
+    .phone-btn:hover { opacity: .9; }
+    .phone-btn::before { content: '\260E'; font-size: 1.2em; }
+
+    /* ---------- Steps note ---------- */
+    .steps-note { margin-top: 32px; text-align: center; }
+    .steps-note-img { max-width: 640px; width: 100%; margin: 0 auto; }
+
+    /* ---------- Company icon ---------- */
+    .company-icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+    .company-detail dt {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item {
+      border-bottom: 1px solid #E2E8F0;
+      padding: 20px 0;
+    }
+    .faq-q {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .faq-q-badge {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      background: #2563EB;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .faq-a {
+      margin-top: 10px;
+      margin-left: 40px;
+      font-size: 14px;
+      color: #475569;
+      line-height: 1.7;
+    }
+
+    /* ---------- Contact Form ---------- */
+    .contact-section {
+      background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
+      position: relative;
+    }
+    .contact-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: rgba(255,255,255,.95);
+      border: 1px solid rgba(203,213,225,.75);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 14px 34px rgba(2,6,23,.08);
+    }
+    .contact-form label {
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .contact-form .required {
+      color: #DC2626;
+      font-weight: 800;
+      margin-left: 6px;
+      font-size: 12px;
+    }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      border: 1px solid #CBD5E1;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 16px;
+      font-family: inherit;
+      color: #1E293B;
+      background: #fff;
+    }
+    .contact-form textarea { min-height: 100px; resize: vertical; }
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: rgba(37,99,235,.75);
+      box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .contact-grid .full { grid-column: 1 / -1; }
+    .contact-submit {
+      width: 100%;
+      background: #FF7A00;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+      border: none;
+      border-radius: 999px;
+      padding: 16px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,.12);
+      transition: opacity .2s;
+      font-family: inherit;
+    }
+    .contact-submit:hover { opacity: .9; }
+    .contact-submit:disabled { opacity: .6; cursor: not-allowed; }
+    .contact-result {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: rgba(37,99,235,.08);
+      border: 1px solid rgba(37,99,235,.22);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .contact-form input.invalid,
+    .contact-form select.invalid,
+    .contact-form textarea.invalid {
+      border-color: #DC2626;
+      box-shadow: 0 0 0 3px rgba(220,38,38,.15);
+    }
+    .field-error {
+      color: #DC2626;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+    .contact-hp { position: absolute !important; left: -9999px !important; }
+    .hidden { display: none; }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      background: #0F172A;
+      color: #94A3B8;
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+    }
+
+    /* ---------- Floating CTA ---------- */
+    .floating-cta {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 99;
+      background: #FF7A00;
+      color: #fff;
+      font-weight: 700;
+      padding: 14px 20px;
+      border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.2);
+      font-size: 15px;
+      transition: opacity .3s, transform .3s;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+    }
+    .floating-cta.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .floating-cta.show:hover { opacity: .9; }
+
+    /* ---------- Fade-in animation ---------- */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------- Responsive ---------- */
+
+    /* Tablet */
+    @media (max-width: 1024px) {
+      .container { padding: 0 20px; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid { grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .section { padding: 56px 0; }
+      .hero { padding: 110px 0 48px; }
+      .hero-title { font-size: clamp(30px, 8vw, 44px); }
+      .hero-badges { gap: 8px; }
+      .hero-badge { font-size: 13px; }
+      .header-logo-img { height: 22px; }
+      .header-cta { font-size: 13px; padding: 7px 14px; }
+      .reduction-layout { grid-template-columns: 1fr; }
+      .reduction-left { text-align: center; }
+      .problems-grid { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+      .cases-grid { grid-template-columns: repeat(2, 1fr); }
+      .voices-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .company-info { grid-template-columns: 1fr; gap: 32px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-card { padding: 24px 20px; }
+      .floating-cta { right: 16px; bottom: 16px; padding: 12px 16px; font-size: 14px; }
+      .reduction-right { padding: 20px; }
+      /* 比較表: スマホではカード形式に切り替え */
+      .comparison-table thead { display: none; }
+      .comparison-table,
+      .comparison-table tbody,
+      .comparison-table tr,
+      .comparison-table td { display: block; width: 100%; }
+      .comparison-table tr {
+        margin-bottom: 16px;
+        border: 1px solid #E5E7EB;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .comparison-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 16px;
+        border: none;
+        border-bottom: 1px solid #F1F5F9;
+        text-align: right;
+      }
+      .comparison-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        text-align: left;
+        flex-shrink: 0;
+        color: #1E293B;
+      }
+      .comparison-table tbody td:first-child {
+        background: #1E293B;
+        color: #fff;
+        font-size: 15px;
+        justify-content: center;
+        white-space: normal;
+      }
+      .comparison-table tbody td:first-child::before { display: none; }
+      .comparison-table tbody td:last-child { background: #EFF6FF; }
+    }
+
+    /* Small phone */
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .section { padding: 44px 0; }
+      .cases-grid { grid-template-columns: 1fr; }
+      .btn-primary { font-size: 16px; padding: 14px 28px; }
+      .section-title { font-size: clamp(24px, 6vw, 32px); }
+      .contact-submit { font-size: 16px; padding: 14px; }
+      .faq-q { font-size: 14px; }
+      .faq-a { font-size: 13px; margin-left: 36px; }
+    }
+
+    /* Google Analytics */
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0H01RJNT6T"></script>
   <script>
-    // ---- 強制切替（デバッグ用）: ?view=sp / ?view=pc ----
-    const params = new URLSearchParams(location.search);
-    const forced = params.get("view");
-    if (forced === "sp") location.replace("./sp.html");
-    if (forced === "pc") location.replace("./pc.html");
-
-    // ---- 端末判定 ----
-    const ua = navigator.userAgent || "";
-    const isIpad = (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1) || /iPad/.test(ua);
-    const isAndroidTablet = /Android/.test(ua) && !/Mobile/.test(ua); // Android で Mobile が無い=タブレット判定
-    const isTablet = isIpad || isAndroidTablet;
-
-    // スマホ判定（幅ベース）
-    const isPhone = window.matchMedia("(max-width: 768px)").matches;
-
-    // 要件：スマホ・タブレット → sp.html / それ以外(PC) → pc.html
-    const useSp = isPhone || isTablet;
-
-    location.replace(useSp ? "./sp.html" : "./pc.html");
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0H01RJNT6T');
   </script>
-  <noscript>
-    <meta http-equiv="refresh" content="0; url=./pc.html">
-  </noscript>
 </head>
-<body></body>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="header">
+  <div class="container">
+    <a href="#" class="header-logo"><img src="./images/pc/1_4_pc_image_1770949866260.png" alt="Fix Power" class="header-logo-img"></a>
+    <a class="header-cta" href="#contact">無料見積もり依頼</a>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="container">
+    <h1 class="hero-title">もう、電気代に<br><span class="highlight">怯えない。</span></h1>
+    <p class="hero-lead">高圧電力の未来を、あなたの手で「固定」する。</p>
+    <p class="hero-desc">市場連動リスクを大幅軽減。<br>独自の燃料調整費なし、固定プランで、企業のコスト削減と予算管理の安定化を。</p>
+    <div class="hero-badges">
+      <span class="hero-badge">無料シミュレーション</span>
+      <span class="hero-badge">最短1分で完了</span>
+      <span class="hero-badge">今なら解約違約金０円</span>
+    </div>
+    <a class="btn-primary" href="#contact">無料見積もりを依頼する →</a>
+  </div>
+</section>
+
+<!-- ===== Problems ===== -->
+<section class="section section--gray fade-in">
+  <div class="container text-center">
+    <span class="section-label">⚡ PROBLEM</span>
+    <h2 class="section-title">こんなお悩みありませんか？</h2>
+    <p class="section-sub">電気代の変動リスクや不明瞭な調整費に悩む企業様が増えています</p>
+  </div>
+  <div class="container">
+    <div class="problems-grid">
+      <div class="problem-card">
+        <div class="problem-card-icon problem-card-icon--red">📈</div>
+        <h3>市場連動型プラン</h3>
+        <p>30分毎の市場価格の高騰・急落で毎月の電気代が乱高下。<span class="red">予算管理が困難</span>になり、経営計画の大きな不安要素となります。</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card-icon problem-card-icon--blue">📄</div>
+        <h3>独自の燃料調整費</h3>
+        <p>固定プランでも各社毎に違う「独自調整額」が料金内に入っているケースがあり、<span class="blue">切り替え後に高くなる</span>ケースが多発しています。</p>
+      </div>
+    </div>
+    <div class="problem-solution">
+      フィックスパワーなら地域電力と同様、プランの透明性が高く、価格変動も最小限に
+    </div>
+    <div class="chart-area">
+      <h3 class="chart-title">料金変動イメージ比較</h3>
+      <div class="chart-legend">
+        <span class="chart-legend-item"><span class="chart-dot chart-dot--red"></span>市場連動</span>
+        <span class="chart-legend-item"><span class="chart-dot chart-dot--blue"></span>フィックスパワー</span>
+      </div>
+      <img src="./images/pc/2_8_pc_image_1770949869301.png" alt="料金変動イメージ比較グラフ：市場連動型は大きく変動するがフィックスパワーは安定" class="chart-img">
+    </div>
+    <div class="section-cta"><a class="btn-primary" href="#contact">無料見積もりを依頼する →</a></div>
+  </div>
+</section>
+
+<!-- ===== Comparison ===== -->
+<section class="section fade-in">
+  <div class="container text-center">
+    <span class="section-label">COMPARE</span>
+    <h2 class="section-title">フィックスパワーの<span class="accent">優位性</span></h2>
+    <p class="section-sub">他社と比較しても、<strong>透明性と安心感</strong>が違います。</p>
+  </div>
+  <div class="container">
+    <div class="table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>比較項目</th>
+            <th>他社固定プラン</th>
+            <th>他社市場連動</th>
+            <th>フィックスパワー</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>電気代の単価</td>
+            <td class="mark-good" data-label="他社固定プラン">〇 契約期間中一定</td>
+            <td class="mark-bad" data-label="他社市場連動">× 月によって変動、予測ができない</td>
+            <td class="mark-good" data-label="フィックスパワー">〇 契約期間中一定</td>
+          </tr>
+          <tr>
+            <td>高騰リスク</td>
+            <td class="mark-bad" data-label="他社固定プラン">× 独自調整額による高騰リスクあり</td>
+            <td class="mark-bad" data-label="他社市場連動">× 上限なしで電力市場高騰リスクあり</td>
+            <td class="mark-good" data-label="フィックスパワー">〇 高騰リスク最小限</td>
+          </tr>
+          <tr>
+            <td>収支予測</td>
+            <td class="mark-bad" data-label="他社固定プラン">× 独自調整額の予測が困難</td>
+            <td class="mark-bad" data-label="他社市場連動">× 請求までコストが確定しない</td>
+            <td class="mark-good" data-label="フィックスパワー">〇 明確な予算計画が可能</td>
+          </tr>
+          <tr>
+            <td>経営への影響</td>
+            <td class="mark-mid" data-label="他社固定プラン">△ 予算管理の手間が発生</td>
+            <td class="mark-bad" data-label="他社市場連動">× 市場動向の監視がストレスに</td>
+            <td class="mark-good" data-label="フィックスパワー">〇 予算計画が容易＝安定経営へ</td>
+          </tr>
+          <tr>
+            <td>燃料調整額</td>
+            <td class="mark-bad" data-label="他社固定プラン">× 独自調整額</td>
+            <td class="mark-good" data-label="他社市場連動">〇 なし</td>
+            <td class="mark-good" data-label="フィックスパワー">〇 地域電力と同じ水準、不明瞭な上乗せなし</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="section-cta"><a class="btn-primary" href="#contact">無料見積もりを依頼する →</a></div>
+  </div>
+</section>
+
+<!-- ===== Reduction ===== -->
+<section class="section section--gradient fade-in">
+  <div class="container">
+    <div class="reduction-layout">
+      <div class="reduction-left">
+        <h2 class="section-title">フィックスパワーなら<span class="accent">確実に削減</span></h2>
+        <div class="reduction-stat">
+          <div class="label">現在の電気代から最大</div>
+          <div class="reduction-number"><span data-countup="25">0</span><span>%</span></div>
+          <div class="reduction-desc">削減</div>
+        </div>
+        <p class="reduction-note">※削減率は契約条件や使用状況により異なります。<br>※試算条件：高圧電力 / 契約電力 150kW / 月間使用量 35,000kWh想定</p>
+        <p class="reduction-bottom"><strong>同じ利用状況でも、<br>基本料金の差により、確実に削減が可能！！</strong></p>
+      </div>
+      <div class="reduction-right">
+        <h3 class="chart-title">電気料金比較イメージ</h3>
+        <p class="reduction-right-sub">一般的な地域電力プランとの比較</p>
+        <svg class="bar-chart-svg" viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg">
+          <!-- 地域電力 -->
+          <rect x="60" y="20" width="120" height="100" rx="4" fill="#3B9AE8"/>
+          <rect x="60" y="120" width="120" height="90" fill="#A0AEC0"/>
+          <rect x="60" y="210" width="120" height="80" rx="0 0 4 4" fill="#63B3ED"/>
+          <!-- ラベル（白文字） -->
+          <text x="120" y="78" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">基本料金</text>
+          <text x="120" y="172" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">従量料金</text>
+          <text x="120" y="256" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">燃料調整費</text>
+
+          <!-- フィックスパワー -->
+          <rect x="280" y="80" width="120" height="60" rx="4" fill="#3B9AE8"/>
+          <rect x="280" y="140" width="120" height="80" fill="#A0AEC0"/>
+          <rect x="280" y="220" width="120" height="70" rx="0 0 4 4" fill="#63B3ED"/>
+          <!-- ラベル（白文字） -->
+          <text x="340" y="116" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">基本料金</text>
+          <text x="340" y="186" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">従量料金</text>
+          <text x="340" y="261" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">燃料調整費</text>
+
+          <!-- 点線（セグメント境界を接続） -->
+          <line x1="180" y1="20"  x2="280" y2="80"  stroke="#6B7280" stroke-width="1.5" stroke-dasharray="6 4"/>
+          <line x1="180" y1="120" x2="280" y2="140" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="6 4"/>
+          <line x1="180" y1="210" x2="280" y2="220" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="6 4"/>
+          <line x1="180" y1="290" x2="280" y2="290" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+          <!-- 下部ラベル -->
+          <text x="120" y="320" text-anchor="middle" fill="#475569" font-size="14" font-weight="700">地域電力</text>
+          <text x="340" y="320" text-anchor="middle" fill="#475569" font-size="14" font-weight="700">フィックスパワー</text>
+
+          <!-- ベースライン -->
+          <line x1="40" y1="290" x2="420" y2="290" stroke="#CBD5E1" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+    <div class="section-cta"><a class="btn-primary" href="#contact">まずは無料シミュレーション →</a></div>
+  </div>
+</section>
+
+<!-- ===== Case Studies ===== -->
+<section class="section fade-in">
+  <div class="container text-center">
+    <span class="section-label">Case Study</span>
+    <h2 class="section-title">削減例</h2>
+    <p class="section-sub">様々な業種での確かなコスト削減</p>
+  </div>
+  <div class="container">
+    <div class="cases-grid">
+      <div class="case-card">
+        <img src="./images/pc/5_5_pc_image_1770949872389.jpg" alt="工場" class="case-card-img">
+        <h3>工場（製造業）</h3>
+        <div class="case-card-row">
+          <span class="case-card-label">電気代削減率</span>
+          <span class="case-card-value"><span class="down-arrow">&#9660;</span> 18% <span class="down-tag">DOWN</span></span>
+        </div>
+        <div class="case-card-row">
+          <span class="case-card-label">年間削減額</span>
+          <span class="case-card-amount">約 ¥3,200,000</span>
+        </div>
+      </div>
+      <div class="case-card">
+        <img src="./images/pc/5_6_pc_image_1770949872638.jpg" alt="オフィスビル" class="case-card-img">
+        <h3>オフィスビル</h3>
+        <div class="case-card-row">
+          <span class="case-card-label">電気代削減率</span>
+          <span class="case-card-value"><span class="down-arrow">&#9660;</span> 15% <span class="down-tag">DOWN</span></span>
+        </div>
+        <div class="case-card-row">
+          <span class="case-card-label">年間削減額</span>
+          <span class="case-card-amount">約 ¥1,450,000</span>
+        </div>
+      </div>
+      <div class="case-card">
+        <img src="./images/pc/5_7_pc_image_1770949872916.jpg" alt="商業施設" class="case-card-img">
+        <h3>商業施設</h3>
+        <div class="case-card-row">
+          <span class="case-card-label">電気代削減率</span>
+          <span class="case-card-value"><span class="down-arrow">&#9660;</span> 20% <span class="down-tag">DOWN</span></span>
+        </div>
+        <div class="case-card-row">
+          <span class="case-card-label">年間削減額</span>
+          <span class="case-card-amount">約 ¥2,800,000</span>
+        </div>
+      </div>
+      <div class="case-card">
+        <img src="./images/pc/5_8_pc_image_1770949873209.jpg" alt="医療施設" class="case-card-img">
+        <h3>医療施設</h3>
+        <div class="case-card-row">
+          <span class="case-card-label">電気代削減率</span>
+          <span class="case-card-value"><span class="down-arrow">&#9660;</span> 17% <span class="down-tag">DOWN</span></span>
+        </div>
+        <div class="case-card-row">
+          <span class="case-card-label">年間削減額</span>
+          <span class="case-card-amount">約 ¥1,900,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-cta"><a class="btn-primary" href="#contact">無料見積もりを依頼する →</a></div>
+  </div>
+</section>
+
+<!-- ===== Voices ===== -->
+<section class="section section--gray fade-in">
+  <div class="container text-center">
+    <span class="section-label">VOICE</span>
+    <h2 class="section-title">お客様の声</h2>
+    <p class="section-sub">&nbsp;</p>
+  </div>
+  <div class="container">
+    <div class="voices-grid">
+      <div class="voice-card">
+        <h3>予算編成が格段に楽に</h3>
+        <p>「市場連動型プランを利用していましたが、毎月の変動が激しく予算管理に苦労していました。フィックスパワーは月々の電気代が読みやすく経営計画も立てやすくなりました。」</p>
+        <span class="voice-card-tag">製造業 総務部長</span>
+      </div>
+      <div class="voice-card">
+        <h3>サポートの手厚さが決め手</h3>
+        <p>「地域電力を利用していて、電気の切り替えに躊躇していましたが、透明性の高い料金体系で、何にいくらかかっているのかが一目瞭然なのが良いですね。シミュレーションも丁寧で、サポートも手厚く、安心して任せられます。」</p>
+        <span class="voice-card-tag">商業施設 責任者</span>
+      </div>
+      <div class="voice-card">
+        <h3>年間200万円のコスト削減</h3>
+        <p>「電気代の高騰リスクから解放され、医療サービスに集中できるようになりました。電気はなくてはならないものなので、安定して削減ができてよかったです。」</p>
+        <span class="voice-card-tag">医療法人 事務長</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Features ===== -->
+<section class="section fade-in">
+  <div class="container text-center">
+    <h2 class="section-title">フィックスパワーの<span class="accent">特徴</span></h2>
+    <p class="section-sub">&nbsp;</p>
+  </div>
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>透明性の高い料金設計</h3>
+        <p>不透明な独自調整額を排除。地域電力と同じ水準に。明瞭な内訳で、コスト構造を可視化します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>導入コスト いつでも０円</h3>
+        <p>導入に関わる費用完全０円。見積等も完全０円のため、まずはお見積もりから！</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>電気の品質はそのまま</h3>
+        <p>地域電力会社の送電設備を利用するため、電気の品質・信頼性は従来と全く変わりません。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <h3>固定単価で予算化容易</h3>
+        <p>毎月の変動リスクを低減し、正確な年間予算策定を実現します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤝</div>
+        <h3>充実したサポート体制</h3>
+        <p>導入検討から切り替え後の運用まで、継続的にサポートします。</p>
+      </div>
+    </div>
+    <div class="section-cta"><a class="btn-primary" href="#contact">無料見積もりを依頼する →</a></div>
+  </div>
+</section>
+
+<!-- ===== Steps ===== -->
+<section class="section section--gray fade-in">
+  <div class="container text-center">
+    <h2 class="section-title">ご契約までの流れ</h2>
+    <p class="section-sub">切り替えまで完全サポート。お客様の手間を最小限に抑えます。</p>
+  </div>
+  <div class="container">
+    <div class="steps-grid">
+      <div class="step-card">
+        <span class="step-badge">STEP 01</span>
+        <div class="step-icon"><img src="./images/pc/8_10_pc_image_1770949881074.png" alt="" width="36" height="36"></div>
+        <h3>お問い合わせ</h3>
+        <p>Webフォームまたはお電話にてご連絡ください。検針票をご準備いただくとよりスムーズです。</p>
+      </div>
+      <div class="step-card">
+        <span class="step-badge">STEP 02</span>
+        <div class="step-icon"><img src="./images/pc/8_11_pc_image_1770949881369.png" alt="" width="36" height="36"></div>
+        <h3>お見積り・ご提案</h3>
+        <p>現在の電気使用状況を分析し、削減効果をシミュレーションしたプランをご提示します。</p>
+      </div>
+      <div class="step-card">
+        <span class="step-badge">STEP 03</span>
+        <div class="step-icon"><img src="./images/pc/8_12_pc_image_1770949881609.png" alt="" width="36" height="36"></div>
+        <h3>電力切り替え</h3>
+        <p>お申し込み後、当社が切り替え手続きを代行。工事の立ち会いも基本的に不要です。</p>
+      </div>
+    </div>
+    <div class="steps-note">
+      <img src="./images/pc/8_13_pc_image_1770949881908.png" alt="お申し込みから切り替え完了まで、目安リードタイム最短1か月で完了" class="steps-note-img">
+    </div>
+  </div>
+</section>
+
+<!-- ===== Company + Contact Info ===== -->
+<section class="section fade-in">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">CONTACT</span>
+      <h2 class="section-title" style="margin-bottom: 8px;"><span class="accent">お問い合わせ</span></h2>
+      <p class="section-sub">まずは無料シミュレーションから！</p>
+    </div>
+    <div class="company-info">
+      <div class="company-detail">
+        <h3>株式会社フィックスパワー</h3>
+        <dl>
+          <dt><img src="./images/pc/9_3_pc_image_1770949882865.png" alt="" class="company-icon"> 所在地</dt>
+          <dd>〒171-0014 東京都豊島区池袋２丁目５７−６</dd>
+          <dt><img src="./images/pc/9_4_pc_image_1770949883136.png" alt="" class="company-icon"> メールアドレス</dt>
+          <dd>support@fixpower.co.jp</dd>
+          <dt><img src="./images/pc/9_5_pc_image_1770949883385.png" alt="" class="company-icon"> 電力小売事業者登録番号</dt>
+          <dd>A0522</dd>
+        </dl>
+      </div>
+      <div class="company-phone">
+        <div class="label">お電話でのお問い合わせ</div>
+        <a class="phone-btn" href="tel:050-8895-4820">050-8895-4820</a>
+        <div class="sub">10:00〜18:00（平日）</div>
+        <div class="sub">Webフォームからも24時間受付中</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section section--gray fade-in">
+  <div class="container text-center">
+    <h2 class="section-title">よくある質問</h2>
+    <p class="section-sub">&nbsp;</p>
+  </div>
+  <div class="container">
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>切り替えにかかる費用はありますか？</div>
+        <div class="faq-a">事務手数料や工事費用などのお客様負担は、原則発生いたしません。※大規模な設備変更等、特殊なケースを除く</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>電気の品質は変わりますか？</div>
+        <div class="faq-a">いいえ、変わりません。現在と同じ送電設備を使用するため、電気の品質や安定性はこれまで通りです。停電時の対応もこれまで同様、送配電事業者が行います。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>見積もりはどれくらいでできますか？</div>
+        <div class="faq-a">直近12ヶ月分の検針票をいただければ、通常3〜5営業日程度でシミュレーションを作成しご提案させていただきます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>切り替えまでどのくらいの期間がかかりますか？</div>
+        <div class="faq-a">お申し込みから供給開始まで、最短1ヶ月〜2ヶ月程度です。現在の契約状況や検針日によって前後する場合があります。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>市場高騰のリスクはありませんか？</div>
+        <div class="faq-a">フィックスパワーの固定プランなら、市場価格が高騰してもお客様への請求単価は変わりません。リスクを当社が吸収する設計です。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>どのような施設が対象ですか？</div>
+        <div class="faq-a">高圧電力をご利用の工場、オフィスビル、商業施設、医療・福祉施設、学校などが対象です。詳細はお気軽にお問い合わせください。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact Form ===== -->
+<section id="contact" class="section contact-section fade-in">
+  <div class="container text-center">
+    <h2 class="section-title">無料見積もり依頼</h2>
+    <p class="section-sub">必要事項をご入力ください。</p>
+  </div>
+  <div class="container">
+    <div class="contact-card">
+      <form id="contactForm" class="contact-form">
+        <label class="contact-hp">会社名（入力しないでください）
+          <input class="contact-hp" type="text" name="company_hp" autocomplete="off">
+        </label>
+        <div class="contact-grid">
+          <div>
+            <label>お名前<span class="required">必須</span></label>
+            <input type="text" name="name" required placeholder="例）山田 太郎">
+          </div>
+          <div>
+            <label>メールアドレス<span class="required">必須</span></label>
+            <input type="email" name="email" required placeholder="例）taro@example.com">
+          </div>
+          <div>
+            <label>会社名<span class="required">必須</span></label>
+            <input type="text" name="company" required placeholder="例）株式会社〇〇">
+          </div>
+          <div>
+            <label>電話番号<span class="required">必須</span></label>
+            <input type="tel" name="tel" required placeholder="例）090-1234-5678">
+          </div>
+          <div>
+            <label>会社住所：都道府県<span class="required">必須</span></label>
+            <select name="prefecture" required>
+              <option value="">選択してください</option>
+              <option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option><option>秋田県</option><option>山形県</option><option>福島県</option>
+              <option>茨城県</option><option>栃木県</option><option>群馬県</option><option>埼玉県</option><option>千葉県</option><option>東京都</option><option>神奈川県</option>
+              <option>新潟県</option><option>富山県</option><option>石川県</option><option>福井県</option><option>山梨県</option><option>長野県</option>
+              <option>岐阜県</option><option>静岡県</option><option>愛知県</option><option>三重県</option>
+              <option>滋賀県</option><option>京都府</option><option>大阪府</option><option>兵庫県</option><option>奈良県</option><option>和歌山県</option>
+              <option>鳥取県</option><option>島根県</option><option>岡山県</option><option>広島県</option><option>山口県</option>
+              <option>徳島県</option><option>香川県</option><option>愛媛県</option><option>高知県</option>
+              <option>福岡県</option><option>佐賀県</option><option>長崎県</option><option>熊本県</option><option>大分県</option><option>宮崎県</option><option>鹿児島県</option><option>沖縄県</option>
+            </select>
+          </div>
+          <div>
+            <label>会社住所：市区町村<span class="required">必須</span></label>
+            <input type="text" name="city" required placeholder="例）福岡市博多区">
+          </div>
+          <div class="full">
+            <label>ひとこと（任意）</label>
+            <textarea name="message" placeholder="例）検針票の用意が可能です。シミュレーション希望です。"></textarea>
+          </div>
+          <div class="full">
+            <button type="submit" class="contact-submit">無料見積もりを依頼する</button>
+            <div id="contactResult" class="contact-result hidden"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <p style="margin-top:16px; color:#94A3B8; font-size:12px; text-align:center;">© Fix Power</p>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <p>© Fix Power. All rights reserved.</p>
+</footer>
+
+<!-- ===== Floating CTA ===== -->
+<a class="floating-cta" href="#contact">お問い合わせ</a>
+
+<!-- ===== Scripts ===== -->
+<script>
+// D1: Header scroll effect + D3: Floating CTA visibility
+const header = document.querySelector('.header');
+const floatingCta = document.querySelector('.floating-cta');
+const heroSection = document.querySelector('.hero');
+const contactSection = document.getElementById('contact');
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const heroBottom = heroSection ? heroSection.offsetTop + heroSection.offsetHeight : 300;
+  const contactTop = contactSection ? contactSection.offsetTop - window.innerHeight * 0.5 : Infinity;
+  // Header
+  if (header) header.classList.toggle('scrolled', scrollY > 60);
+  // Floating CTA: show after hero, hide near contact form
+  if (floatingCta) {
+    const shouldShow = scrollY > heroBottom && scrollY < contactTop;
+    floatingCta.classList.toggle('show', shouldShow);
+  }
+}, { passive: true });
+
+// Scroll fade-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// B2: Count-up animation
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = parseInt(el.dataset.countup, 10);
+    if (isNaN(target)) return;
+    countObserver.unobserve(el);
+    let current = 0;
+    const duration = 1200;
+    const step = Math.max(1, Math.floor(target / (duration / 30)));
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) { current = target; clearInterval(timer); }
+      el.textContent = current.toLocaleString();
+    }, 30);
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('[data-countup]').forEach(el => countObserver.observe(el));
+
+// Contact form
+window.FIXPOWER_CONTACT_ENDPOINT = "https://script.google.com/macros/s/AKfycbw0kjsaQZvnQ_kaYUm8ajYinLP3iE_aYH-gpk3sAat5Dq5MKw6eTtlJtS672FrJanNm/exec";
+(function(){
+  const form = document.getElementById("contactForm");
+  const resultEl = document.getElementById("contactResult");
+  if(!form) return;
+  function showResult(msg){
+    if(!resultEl) return;
+    resultEl.textContent = msg;
+    resultEl.classList.remove("hidden");
+  }
+  // A3: Clear validation on input
+  form.querySelectorAll('input, select, textarea').forEach(field => {
+    field.addEventListener('input', function() {
+      this.classList.remove('invalid');
+      const err = this.parentElement.querySelector('.field-error');
+      if (err) err.remove();
+    });
+  });
+
+  function validateForm() {
+    let valid = true;
+    let firstInvalid = null;
+    // Remove old errors
+    form.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
+    form.querySelectorAll('.field-error').forEach(el => el.remove());
+
+    form.querySelectorAll('[required]').forEach(field => {
+      if (!field.value.trim()) {
+        field.classList.add('invalid');
+        const msg = document.createElement('div');
+        msg.className = 'field-error';
+        msg.textContent = 'この項目は必須です';
+        field.parentElement.appendChild(msg);
+        if (!firstInvalid) firstInvalid = field;
+        valid = false;
+      }
+    });
+    // Email format
+    const email = form.querySelector('[type="email"]');
+    if (email && email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      email.classList.add('invalid');
+      const msg = document.createElement('div');
+      msg.className = 'field-error';
+      msg.textContent = 'メールアドレスの形式が正しくありません';
+      email.parentElement.appendChild(msg);
+      if (!firstInvalid) firstInvalid = email;
+      valid = false;
+    }
+    if (firstInvalid) firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return valid;
+  }
+
+  form.addEventListener("submit", async function(ev){
+    ev.preventDefault();
+    if (!validateForm()) return;
+
+    const endpoint = window.FIXPOWER_CONTACT_ENDPOINT;
+    if(!endpoint || endpoint.includes("YOUR_WEB_APP_URL_HERE")){
+      showResult("送信先URLが未設定です。");
+      return;
+    }
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn ? submitBtn.textContent : "";
+    if(submitBtn){ submitBtn.disabled = true; submitBtn.textContent = "送信中..."; }
+    try{
+      const fd = new FormData(form);
+      fd.append("page_url", location.href);
+      fd.append("user_agent", navigator.userAgent);
+      await fetch(endpoint, { method: "POST", mode: "no-cors", body: fd });
+      form.reset();
+      showResult("送信ありがとうございました。担当者より折り返しご連絡いたします。検針票をお手元にご用意いただくとスムーズです。");
+      try{ resultEl.scrollIntoView({behavior:"smooth", block:"center"}); }catch(e){}
+    }catch(e){
+      showResult("送信に失敗しました。通信環境をご確認のうえ、再度お試しください。");
+    }finally{
+      if(submitBtn){ submitBtn.disabled = false; submitBtn.textContent = originalText || "無料見積もりを依頼する"; }
+    }
+  });
+})();
+</script>
+</body>
 </html>
