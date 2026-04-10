@@ -3875,7 +3875,7 @@ height:100%;">
 
     <div class="flex flex-col items-center" style="position:relative; padding: 58px 120px 80px;">
       <div style="text-align:center; margin-bottom: 18px;">
-        <div style="font-weight:800; color:rgba(30, 41, 59, 1); font-size:44px; font-family:'Noto Sans JP'; line-height:1.2;">お申し込み（無料）</div>
+        <div style="font-weight:800; color:rgba(30, 41, 59, 1); font-size:44px; font-family:'Noto Sans JP'; line-height:1.2;">無料見積もり依頼</div>
         <div style="margin-top:10px; color:rgba(100, 116, 139, 1); font-size:16px; font-family:'Noto Sans JP';">必要事項をご入力ください。</div>
       </div>
 
@@ -3965,7 +3965,7 @@ height:100%;">
               <textarea name="message" placeholder="例）検針票の用意が可能です。シミュレーション希望です。"></textarea>
             </div>
             <div class="col-span-2">
-              <button type="submit" class="contact-submit">無料で申し込む</button>
+              <button type="submit" class="contact-submit">無料見積もりを依頼する</button>
               <div id="contactResult" class="contact-result hidden"></div>
             </div>
           </div>
@@ -4038,7 +4038,7 @@ window.FIXPOWER_CONTACT_ENDPOINT = window.FIXPOWER_CONTACT_ENDPOINT || "https://
     }catch(e){
       showResult("送信に失敗しました。通信環境をご確認のうえ、再度お試しください。");
     }finally{
-      if(submitBtn){ submitBtn.disabled = false; submitBtn.textContent = originalText || "無料で申し込む"; }
+      if(submitBtn){ submitBtn.disabled = false; submitBtn.textContent = originalText || "無料見積もりを依頼する"; }
     }
   });
 })();
